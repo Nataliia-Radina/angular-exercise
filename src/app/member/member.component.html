@@ -1,0 +1,7 @@
+<div *ngIf="team">
+  <ul class="items">
+    <li *ngFor="let member of team?.members">
+      <span>{{member.name}}</span>
+      <span>{{member.age}}</span>
+  </ul>
+</div>

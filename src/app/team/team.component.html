@@ -1,0 +1,11 @@
+<div *ngIf="organization">
+    <ul class="items">
+        <li *ngFor="let team of organization?.teams">
+            <span>{{team.team}}</span>
+            <span>{{team.location}}</span>
+            <span>Members of a team:</span>
+            <app-member [team]="team" ></app-member>
+        </li>
+    </ul>
+</div>
+
