@@ -1,5 +1,9 @@
-<h1>
-    Welcome to {{organization?.organization}}, {{organization?.location}}!
-</h1>
-<h2>Get to know our teams:</h2>
+<div class="header">
+    <a href="/" class="header_logo" title="Lobster Ink"></a>
+</div>
+<div class="organization-main">
+    <h1>
+        {{title}} {{organization?.organization}}, {{organization?.location}}
+    </h1>
 <app-team [organization]="organization"></app-team>
+</div>

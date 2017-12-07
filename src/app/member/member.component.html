@@ -1,7 +1,7 @@
-<div *ngIf="team">
-  <ul class="items">
-    <li *ngFor="let member of team?.members">
-      <span>{{member.name}}</span>
-      <span>{{member.age}}</span>
-  </ul>
-</div>
+<h3>{{ title }}</h3>
+<ul class="items">
+  <li *ngFor="let member of team?.members"  class="team-member" @flyInOut>
+    <img src={{member.imageUrl}} alt={{member.name}} class="member-image">
+    <p>{{member.name}}, {{member.age}}</p>
+</ul>
+

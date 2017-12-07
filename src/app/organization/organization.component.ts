@@ -9,7 +9,7 @@ import { AppService } from '../app.service';
 
 export class OrganizationComponent  implements OnInit {
 
-
+  title = "Welcome to";
   constructor(private _appService:AppService) {
   }
 

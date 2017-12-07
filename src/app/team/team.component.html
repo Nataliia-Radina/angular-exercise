@@ -1,11 +1,19 @@
-<div *ngIf="organization">
-    <ul class="items">
-        <li *ngFor="let team of organization?.teams">
-            <span>{{team.team}}</span>
-            <span>{{team.location}}</span>
-            <span>Members of a team:</span>
-            <app-member [team]="team" ></app-member>
+<h2>{{ title }}</h2>
+<div class="organization-teams">
+        <li *ngFor="let team of organization?.teams"
+            [class.selected]="team === selectedTeam"
+             class="team-component">
+                <div class="team-toggler"  (click)="onSelect(team)">
+                        <span>{{team.team}}</span>
+                        <span>{{team.location}}</span>
+                </div>
+                <div class="team-details"  *ngIf="team === selectedTeam">
+                        <app-member [team]="selectedTeam"></app-member>
+                </div>
         </li>
-    </ul>
 </div>
+
+
+
+
 
